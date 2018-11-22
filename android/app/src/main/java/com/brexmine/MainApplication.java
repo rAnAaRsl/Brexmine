@@ -1,4 +1,4 @@
-package com.touchsample;
+package com.brexmine;
 
 import android.app.Application;
 

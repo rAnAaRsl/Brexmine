@@ -23,7 +23,7 @@ export default class App extends Component<Props> {
     i = 1;
     state = {
         isLoading: false,
-        url: 'https://brixmine.com/'
+        url: 'https://members.brixmine.com/MemberPanel/login?ReturnUrl=%2f'
     }
 
     componentDidMount() {
@@ -57,6 +57,8 @@ export default class App extends Component<Props> {
     handleBackPress = () => {
         console.log("clicked");
         this.web.goBack(); // works best when the goBack is async
+        if (this.state.url === 'https://brixmine.com/')
+            this.setState({isLoading: false})
         return true;
     }
 
@@ -85,7 +87,7 @@ export default class App extends Component<Props> {
                     startInLoadingState
                     onLoad={e => {
                         if (this.state.url === 'https://brixmine.com/')
-                            this.setState({isLoading: true})
+                            this.setState({isLoading: false})
                     }}
                     scalesPageToFit={true}
                     onError={e => {

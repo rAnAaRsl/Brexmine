@@ -1,4 +1,4 @@
-package com.touchsample;
+package com.brexmine;
 
 import com.facebook.react.ReactActivity;
 
